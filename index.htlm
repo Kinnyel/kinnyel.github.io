@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Ma Valentine ❤️</title>
-    style.css
-    script.js</script>
+
+    <!-- LIEN VERS LE CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LIEN VERS LE JAVASCRIPT -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
     <!-- MUSIQUE -->
-    13 Billie Eilish - i love you.mp3</audio>
+    <audio id="music" src="13 Billie Eilish - i love you.mp3" preload="auto"></audio>
+
     <!-- CŒURS QUI TOMBENT -->
     <div id="hearts-container"></div>
+
     <!-- LETTRE -->
     <div id="letter" class="closed">
         <div id="envelope">
             <div id="top"></div>
             <div id="content">
                 <h1 class="question">Veux‑tu être ma Valentine ? ❤️</h1>
+
                 <div id="choices">
                     <button id="yesBtn">Oui</button>
                     <button id="noBtn">Non</button>
                 </div>
+
                 <p id="msg"></p>
             </div>
         </div>
+
         <!-- MESSAGE FINAL -->
         <div id="finalMessage">
             <p>
-                Voici ton message final 💌<br>
-                C'est surement un signe c'est peut-être de la chance mais une sacrée coïncidence qu'on se soit mit ensemble. Et ça fait déjà plus d'un an. Un an ensemble, à se supporter à batifoler à se disputer à discuter mais surtout une année à s'aimer. C'est spécial et pour marqué le coup j'avais envie de faire quelque chose. Te montrer à quel point tu es importante à mes yeux. Tu m'as éduqué tu m'as appris à prendre mes responsabilités tu m'as rendu plus doux et je t'en suis reconnaisant. Tu m'as toujours éblouit depuis le premier jour. Ton teint laiteux, le chatain de tes yeux. Ta peau si douce, tes cheveux si beaux. Ta démarche tes manières ta voix tes lèvres. Tout ce ci ma toujours impressionné et te comparé aux étoiles est une insulte elles ne t'arrives pas à la cheville. Toute la création à conduit à toi et à ta beauté.Dire combien je t'aime me prendrai un millier de vie à défaut je chanterai mon amour pour toi durant la seule que je possède. Je t'aime de SOUZA Shanya.
+                💌<br>
+                C'est surement un signe c'est peut-être de la chance mais une sacrée coïncidence qu'on se soit mit ensemble. Et ça fait déjà plus d'un an. Un an ensemble, à se supporter à batifoler à se disputer à discuter mais surtout une année à s'aimer. C'est spécial et pour marqué le coup j'avais envie de faire quelque chose. Te montrer à quel point tu es importante à mes yeux. Tu m'as éduqué tu m'as appris à prendre mes responsabilités tu m'as rendu plus doux et je t'en suis reconnaisant. Tu m'as toujours éblouit depuis le premier jour. Ton teint laiteux, le châtain de tes yeux. Ta peau si douce, tes cheveux si beaux. Ta démarche tes manières ta voix tes lèvres. Tout ce ci ma toujours impressionné et te comparé aux étoiles est une insulte elles ne t'arrives pas à la cheville. Toute la création à conduit à toi et à ta beauté.Dire combien je t'aime me prendrait un millier de vie à défaut je chanterai mon amour pour toi durant la seule que je possède. Je t'aime de SOUZA Shanya.
             </p>
         </div>
+        <!-- Buisson de roses -->
+<div id="roseBush"></div>
     </div>
 </body>
 </html>

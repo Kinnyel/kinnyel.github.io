@@ -52,12 +52,47 @@ setTimeout(() => {
 // ----------------------
 // 💕 CŒURS QUI TOMBENT
 // ----------------------
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.textContent = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (2 + Math.random() * 3) + "s";
-    heartsContainer.appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
+function createButterfly() {
+   // Conteneur des papillons
+const butterfliesContainer = document.getElementById("butterflies-container");
+
+// Deux papillons en SVG encodés en data-URI (aucun téléchargement requis)
+const butterflyBlack = `url("data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'>
+  <path fill='%23000000' d='M32 22c2 0 4-2 6-3 6-3 14-7 20-1 5 5-3 10-8 12-3 1-7 1-10-1 2 3 3 7 1 10-2 3-7 4-9-1-2 5-7 4-9 1-2-3-1-7 1-10-3 2-7 2-10 1-5-2-13-7-8-12 6-6 14-2 20 1 2 1 4 3 6 3z'/>
+</svg>")`;
+
+const butterflyPurple = `url("data:image/svg+xml;utf8,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'>
+  <path fill='%238a2be2' d='M32 22c2 0 4-2 6-3 6-3 14-7 20-1 5 5-3 10-8 12-3 1-7 1-10-1 2 3 3 7 1 10-2 3-7 4-9-1-2 5-7 4-9 1-2-3-1-7 1-10-3 2-7 2-10 1-5-2-13-7-8-12 6-6 14-2 20 1 2 1 4 3 6 3z'/>
+</svg>")`;
+
+// Crée un papillon à un endroit aléatoire, avec une durée aléatoire
+function createButterfly() {
+    const b = document.createElement("div");
+    b.className = "butterfly";
+
+    // Position horizontale aléatoire
+    b.style.left = Math.random() * 100 + "vw";
+
+    // Légère dérive horizontale pour l’ondulation
+    b.style.setProperty("--x", (Math.random() * 40 - 20) + "px");
+
+    // Durée d’animation (entre 3s et 6s)
+    b.style.animationDuration = (3 + Math.random() * 3).toFixed(2) + "s";
+
+    // Choix aléatoire: noir ou violet (60% violet / 40% noir, ajuste si tu veux)
+    const isPurple = Math.random() < 0.6;
+    b.style.backgroundImage = isPurple ? butterflyPurple : butterflyBlack;
+
+    butterfliesContainer.appendChild(b);
+
+    // Nettoyage du DOM après l’animation
+    setTimeout(() => b.remove(), 7000);
+}
+
+// Fréquence d’apparition (toutes les 350 ms)
+setInterval(createButterfly, 350);
 }
 setInterval(createHeart, 300);
+
